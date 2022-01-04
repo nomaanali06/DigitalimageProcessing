@@ -1,5 +1,32 @@
-IN THIS PROJECT OF IMAGE PROCESSING 
-WE ARE TAKING A PICTURE OF AN ATTENDENCE SHEET
-AND AFTER PREPROCESSING IT WE EXTRACT NAMES 
-AND THEIR CORRESPOONDING ATTENDENCE
-FROM IT WHICH WILL BE STORED IN A SEPERATE CSV FILE
+Attendance to excel sheet generator
+Introduction: This project is about using image processing techniques along with Machine learning to achieve attendance recognition for marked attendance sheets and generate excel sheets. To achieve this we focused on basically three objectives we want to achieve. Firstly, individual character localization from physical attendance sheets. Secondly, we recognize the handwritten attendance characters, thirdly dataframe creation of model output to generate excel sheets .
+ 
+Libraries used
+Following libraries used for solution development
+cv2
+matplotlib.pyplot
+Numpy 
+pandas
+
+Dataset used
+There will be two dataset we will be using first.
+Extended mnist Dataset: To train our single character recognition model.
+University attendance sheets: To test out models.
+
+Basic digital image processing techniques used 
+Image cropping: To localize attendance characters.
+Image resizing: To standardize training and testing images.
+Image conversions: To standardize testing as of training images. Like grayscale
+
+Learning Models used and their performance:
+SVM, KNN and OCR were used to classify the individual characters from attendance sheet the following is their results:
+SVM: 
+With training on Emnist dataset and test on similar dataset yield 99% accuracy but when test/evaluate against images from attendance sheet it categorizes every character as of same class.
+KNN: 
+With training on Emnist dataset and test on similar dataset yield 99% accuracy but when test/evaluate against images from attendance sheet it categorizes every character as of the same class.
+OCR: 
+On ocr outperformed SVM and KNN on given images of attendance sheet and yield better accuracy then SVM and KNN.
+Conclusion
+With combined usage of image processing techniques and Ocr we are able to achieve a good solution to our problem, where the rest of machine learning algorithms couldn’t do well. 
+
+
